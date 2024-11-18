@@ -1,0 +1,17 @@
+---
+// @ts-ignore
+import type { any } from "astro:schema";
+import ImageCarousel from "./ImageCarousel";
+
+
+const images = import.meta.glob('/src/assets/rc-*.jpg', { eager: true, query: '?url' });
+
+// Extract the image URLs from the imported object
+const imageUrls = Object.values(images).map((module: any) => module.default); // 'default' is the correct property for the URL
+
+
+---
+
+<div >
+    <ImageCarousel imageUrls={imageUrls} client:load />
+</div>

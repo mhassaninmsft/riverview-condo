@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import heroImg from '../assets/rc-11.jpg';
+---
+
+
+<section class="bg-white py-20">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="lg:w-1/2 lg:pr-12">
+        <h1 class="text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6">
+          Discover Our Quiet, Welcoming Community
+        </h1>
+        <p class="text-xl text-gray-700 mb-8">
+          Nestled in a serene environment, our community offers a perfect blend of families, young professionals, and senior retirees. Enjoy expansive open spaces ideal for leisurely walks, playtime with children, or simply relaxing outdoors. With a high owner-occupancy rate and low association fees, our condominium is both affordable and resident-focused. Plus, with trustees who are on-site owners, you can trust that every decision is made with the long-term well-being of our community in mind.        </p>
+      </div>
+      <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
+        <Image 
+          src={heroImg} 
+          alt="Riverview condominium 13 pullard road Grafton" 
+          class="rounded-lg shadow-xl"
+          width={800}
+          height={400}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg p-8 max-w-3xl w-full">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-2xl font-bold">How Your Co. Works</h3>
+      <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
